@@ -12,8 +12,10 @@
         "url": "https://github.com/ska-kialo/eslint-plugin-unnecessary-filename-in-import/issues"
     },
     "scripts": {
+        "test": "echo \"There are no tests yet 🙀.\"",
         "lint": "eslint --cache --fix src/**/*.ts",
-        "test": "echo \"There are no tests yet 🙀.\""
+        "lint-ci": "eslint src/**/*.ts",
+        "lint-and-test": "yarn tsc && yarn lint-ci && yarn test"
     },
     "devDependencies": {
         "@types/eslint": "^6.1.9",
