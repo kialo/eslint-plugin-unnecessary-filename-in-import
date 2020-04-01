@@ -1,0 +1,43 @@
+{
+    "name": "eslint-plugin-unnecessary-filename-in-import",
+    "version": "0.0.1-alpha",
+    "main": "lib/index.js",
+    "author": "Simon Kalt <ska@kialo.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ska-kialo/eslint-plugin-unnecessary-filename-in-import"
+    },
+    "bugs": {
+        "url": "https://github.com/ska-kialo/eslint-plugin-unnecessary-filename-in-import/issues"
+    },
+    "scripts": {
+        "lint": "eslint --cache --fix src/**/*.ts",
+        "test": "echo \"There are no tests yet 🙀.\""
+    },
+    "devDependencies": {
+        "@types/eslint": "^6.1.9",
+        "@types/node": "^13.9.8",
+        "@typescript-eslint/eslint-plugin": "^2.26.0",
+        "@typescript-eslint/parser": "^2.26.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.3",
+        "lint-staged": "^10.1.1",
+        "prettier": "^2.0.2",
+        "typescript": "^3.8.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.ts": "eslint --cache --fix"
+    },
+    "engines": {
+        "node": ">=10"
+    }
+}
