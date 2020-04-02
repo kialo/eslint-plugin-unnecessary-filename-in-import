@@ -17,6 +17,9 @@
         "lint-ci": "eslint src/**/*.ts",
         "lint-and-test": "yarn tsc && yarn lint-ci && yarn test"
     },
+    "peerDependencies": {
+        "eslint": ">= 5.0.0"
+    },
     "devDependencies": {
         "@types/eslint": "^6.1.9",
         "@types/node": "^13.9.8",
@@ -41,5 +44,9 @@
     },
     "engines": {
         "node": ">=10"
-    }
+    },
+    "keywords": [
+        "eslint",
+        "eslintplugin"
+    ]
 }
