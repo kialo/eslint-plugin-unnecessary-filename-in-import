@@ -12,16 +12,20 @@
         "url": "https://github.com/ska-kialo/eslint-plugin-unnecessary-filename-in-import/issues"
     },
     "scripts": {
-        "test": "echo \"There are no tests yet 🙀.\"",
-        "lint": "eslint --cache --fix src/**/*.ts",
-        "lint-ci": "eslint src/**/*.ts",
-        "lint-and-test": "yarn tsc && yarn lint-ci && yarn test"
+        "test": "jest test",
+        "lint": "eslint --cache --fix src/**/*.ts test/**/*.ts",
+        "lint-ci": "eslint src/**/*.ts test/**/*.ts",
+        "tsc": "tsc -p src",
+        "typecheck-src": "tsc --noEmit -p src",
+        "typecheck-test": "tsc --noEmit -p test",
+        "lint-and-test": "yarn typecheck-src && yarn typecheck-test && yarn lint-ci && yarn test"
     },
     "peerDependencies": {
         "eslint": ">= 5.0.0"
     },
     "devDependencies": {
         "@types/eslint": "^6.1.9",
+        "@types/jest": "^25.1.4",
         "@types/node": "^13.9.8",
         "@typescript-eslint/eslint-plugin": "^2.26.0",
         "@typescript-eslint/parser": "^2.26.0",
@@ -30,8 +34,11 @@
         "eslint-plugin-import": "^2.20.2",
         "eslint-plugin-prettier": "^3.1.2",
         "husky": "^4.2.3",
+        "jest": "^25.2.4",
+        "jest-circus": "^25.2.4",
         "lint-staged": "^10.1.1",
         "prettier": "^2.0.2",
+        "ts-jest": "^25.3.0",
         "typescript": "^3.8.3"
     },
     "husky": {
