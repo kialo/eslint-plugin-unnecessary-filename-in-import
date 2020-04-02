@@ -10,7 +10,7 @@ interface ModuleSpecifierMatch {
     importFilename: string;
 }
 
-const UNNECESSARY_FILENAME_REGEX = /^(.*\/(\w+))\/\2$/;
+const UNNECESSARY_FILENAME_REGEX = /^(.*\/([^/]+))\/\2$/;
 const OPTION_SKIP_PACKAGE_JSON_CHECK = 'skipPackageJsonCheck';
 
 const DESCRIPTION = `Requires import statements to only reference the directory of a module
@@ -63,7 +63,7 @@ const Rule: RuleNS.RuleModule = {
                 if (match) {
                     if (skipPackageJsonCheck || packageJsonMatches(context, match)) {
                         context.report({
-                            message: 'Import statement contains unnecessary filename',
+                            message: 'Import statement contains unnecessary filename.',
                             node,
                             fix(fixer) {
                                 return fixer.replaceText(match.importSource, match.fixedImportSource);
