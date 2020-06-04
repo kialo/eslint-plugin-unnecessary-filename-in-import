@@ -18,7 +18,7 @@ describe('with-package-json', () => {
                 return JSON.stringify({ main: 'matching-package-json.js' });
             }
 
-            throw new Error('Tried to read unexpected file in test: ' + path);
+            throw new Error(`Tried to read unexpected file in test: ${path.toString()}`);
         });
     });
 

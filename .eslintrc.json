@@ -15,12 +15,12 @@
     "plugins": ["@typescript-eslint", "prettier", "import"],
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:prettier/recommended"
     ],
     "rules": {
-        "@typescript-eslint/no-use-before-define": ["error", { "functions": false }]
+        "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
+        "@typescript-eslint/restrict-template-expressions": ["error", { "allowBoolean": true, "allowNumber": true }]
     }
 }
