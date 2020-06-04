@@ -54,7 +54,7 @@ const Rule: RuleNS.RuleModule = {
         ],
     },
     create(context) {
-        const options = context.options[0];
+        const options = context.options[0] as { [OPTION_SKIP_PACKAGE_JSON_CHECK]?: boolean } | undefined;
         const skipPackageJsonCheck = options?.[OPTION_SKIP_PACKAGE_JSON_CHECK] ?? false;
 
         return {
@@ -110,8 +110,8 @@ function packageJsonMatches(context: RuleNS.RuleContext, { importFilename, impor
         return false;
     }
 
-    const packageJson = JSON.parse(fs.readFileSync(packageFile, { encoding: 'utf-8' }));
-    return packageJson.main.replace(/\.(j|t)sx?$/, '') === importFilename;
+    const packageJson = JSON.parse(fs.readFileSync(packageFile, { encoding: 'utf-8' })) as { main?: string };
+    return packageJson.main?.replace(/\.(j|t)sx?$/, '') === importFilename;
 }
 
 export default Rule;
