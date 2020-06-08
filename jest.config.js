@@ -2,7 +2,7 @@ module.exports = {
     testRunner: 'jest-circus/runner',
     preset: 'ts-jest',
     testEnvironment: 'node',
-    testRegex: '.*\\.test\\.ts?$',
+    testRegex: '.*\\.test\\.ts$',
     moduleFileExtensions: ['ts', 'js'],
     testPathIgnorePatterns: ['/node_modules/', '/.cache/'],
     watchPathIgnorePatterns: ['/.cache/'],
