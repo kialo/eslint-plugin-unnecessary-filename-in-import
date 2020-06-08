@@ -1,7 +1,7 @@
 {
     "name": "eslint-plugin-unnecessary-filename-in-import",
     "description": "ESLint plugin to remove superfluous filenames in import statements.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "lib/index.js",
     "author": "Simon Kalt <ska@kialo.com>",
     "license": "MIT",
