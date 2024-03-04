@@ -1,5 +1,5 @@
 import { RuleTester } from 'eslint';
-import Rule from '../src/rule';
+import Rule from './rule';
 
 export const errorMessage = 'Import statement contains unnecessary filename.';
 
