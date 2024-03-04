@@ -3,14 +3,14 @@
     "description": "ESLint plugin to remove superfluous filenames in import statements.",
     "version": "1.0.2",
     "main": "lib/index.js",
-    "author": "Simon Kalt <ska@kialo.com>",
+    "author": "Kialo GmbH <open-source@kialo.com>",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ska-kialo/eslint-plugin-unnecessary-filename-in-import"
+        "url": "https://github.com/kialo/eslint-plugin-unnecessary-filename-in-import"
     },
     "bugs": {
-        "url": "https://github.com/ska-kialo/eslint-plugin-unnecessary-filename-in-import/issues"
+        "url": "https://github.com/kialo/eslint-plugin-unnecessary-filename-in-import/issues"
     },
     "files": [
         "lib/*",
